@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+const BACKEND = const BACKEND = import.meta.env.VITE_API_URL || 'http://localhost:5000'
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -44,7 +44,7 @@ export default function Login() {
 
           <div style={{ display: 'flex', gap: 8, marginTop: 16 }}>
             <button className="btn-primary" type="submit">Sign In</button>
-            <a className="btn-ghost" href="/auth/google">Continue with Google</a>
+            <a className="btn-ghost" href={`${BACKEND}/auth/google`}>Continue with Google</a>
           </div>
         </form>
       </div>
