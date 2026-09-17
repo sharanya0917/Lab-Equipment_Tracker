@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const BACKEND = const BACKEND = import.meta.env.VITE_API_URL || 'http://localhost:5000'
+const BACKEND = import.meta.env.VITE_API_URL || 'http://localhost:5000'
 
 export default function Login() {
   const [email, setEmail] = useState('');
