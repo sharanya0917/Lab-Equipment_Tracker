@@ -1,4 +1,4 @@
-const API_BASE = '/api';
+const API_BASE = (import.meta.env.VITE_API_URL || '') + '/api'; 
 
 export async function request(path, { method = 'GET', body = null, query = {} } = {}) {
   const url = new URL(API_BASE + path, window.location.origin);
